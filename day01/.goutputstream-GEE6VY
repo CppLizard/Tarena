@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <ctime>
+#include <iomanip>
+#include <Windows.h>
+#include <stdio.h>
+#include <stdlib.h>
+using namespace std;
+
+char func ( )
+{
+	int n=99;
+	char init , ch;
+	init = rand ( ) % 26 + 65;
+	for ( int x = 0; x < 20; x++ )
+	{
+		for ( int y = 0; y < 5; y++ )
+		{
+			if ( n % 9 )
+			{
+				ch = rand ( ) % 26 + 65;
+				cout << setw ( 2 ) << n << "£º" << ch << "  ";
+				n--;
+
+			}
+			else
+			{
+				cout << setw ( 2 ) << n << "£º" << init << "  ";
+				n--;
+			}
+		}
+		cout << endl;
+	}
+	return init;
+}
+
+int main ( )
+{
+	srand ( ( unsigned ) time ( NULL ) );
+
+	cout << endl << "
